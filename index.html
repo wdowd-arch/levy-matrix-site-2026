@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Marblehead Levy Capacity Matrix 2026</title>
-<meta name="description" content="Standalone GitHub Pages version of the Marblehead levy capacity matrix showing total property tax levy growth over 30 years." />
+<title>Median Marblehead Home Tax Bill Impact</title>
+<meta name="description" content="Standalone page showing how each override scenario affects the median Marblehead single-family home's tax bill." />
 <style>
   html, body {
     margin: 0;
@@ -48,7 +48,6 @@
     font-size: 13px;
     line-height: 1.65;
   }
-
   .mhd-matrix { font-family: Georgia, serif; background: #F9F7F3; padding: 24px 18px; border-radius: 4px; color: #111; box-sizing: border-box; max-width: 100%; border: 1px solid #e1d9cc; }
   .mhd-matrix *, .mhd-matrix *::before, .mhd-matrix *::after { box-sizing: border-box; }
   .mhd-matrix .mhd-inner { max-width: 680px; margin: 0 auto; }
@@ -76,12 +75,12 @@
   .mhd-matrix .cell-today { background: #F0EDE6; color: #555; border: 1px dashed #C9C2B0; }
   .mhd-matrix .cell-today .val { color: #555; font-weight: 500; }
   .mhd-matrix .val { font-size: 12px; font-weight: 600; letter-spacing: 0; font-family: Georgia, serif; white-space: nowrap; line-height: 1.15; }
-  .mhd-matrix .cell-y30 .val { font-size: 13px; font-weight: 700; }
+  .mhd-matrix .cell-y10 .val { font-size: 13px; font-weight: 700; }
   .mhd-matrix .delta { font-size: 10px; opacity: 0.85; margin-top: 3px; font-family: Georgia, serif; white-space: nowrap; font-weight: 500; }
-  .mhd-matrix .callout { margin-top: 16px; background: #F5EFE0; border: 1px solid #D9C9A3; border-radius: 6px; padding: 12px 14px; font-size: 12px; line-height: 1.65; color: #555; font-family: Georgia, serif; }
-  .mhd-matrix .callout strong { color: #5A4520; }
-  .mhd-matrix .whymed { margin-top: 14px; padding: 12px 14px; background: #EDF1F5; border: 1px solid #C4D0DE; border-radius: 6px; font-size: 11px; line-height: 1.7; color: #555; font-family: Georgia, serif; }
-  .mhd-matrix .whymed strong { color: #1E3A5F; }
+  .mhd-matrix .callout { margin-top: 16px; background: #FEF2F2; border: 1px solid #FECACA; border-radius: 6px; padding: 12px 14px; font-size: 12px; line-height: 1.65; color: #555; font-family: Georgia, serif; }
+  .mhd-matrix .callout strong { color: #7A1515; }
+  .mhd-matrix .whymed { margin-top: 14px; padding: 12px 14px; background: #F0F4F8; border: 1px solid #D6E0EA; border-radius: 6px; font-size: 11px; line-height: 1.7; color: #555; font-family: Georgia, serif; }
+  .mhd-matrix .whymed strong { color: #1B4F6A; }
   .mhd-matrix .footnote { margin-top: 12px; font-size: 11px; color: #888; line-height: 1.7; border-top: 1px solid #DDD; padding-top: 10px; font-family: Georgia, serif; }
 
   @media (max-width: 700px) {
@@ -90,7 +89,7 @@
     .mhd-matrix .thead-col { width: 14.8%; }
     .mhd-matrix .scenario-label { font-size: 12px; }
     .mhd-matrix .val { font-size: 11px; }
-    .mhd-matrix .cell-y30 .val { font-size: 12px; }
+    .mhd-matrix .cell-y10 .val { font-size: 12px; }
     .mhd-matrix .cell { padding: 7px 1px; }
     .mhd-matrix .delta { font-size: 9px; }
     .mhd-matrix .cell { min-height: 46px; }
@@ -113,7 +112,7 @@
     .mhd-matrix td.c { padding: 2px 1px; }
     .mhd-matrix .cell { padding: 6px 1px; border-radius: 4px; }
     .mhd-matrix .val { font-size: 10px; }
-    .mhd-matrix .cell-y30 .val { font-size: 11px; }
+    .mhd-matrix .cell-y10 .val { font-size: 11px; }
     .mhd-matrix .delta { font-size: 8px; margin-top: 2px; }
     .mhd-matrix .cell { min-height: 42px; }
     .mhd-matrix .callout, .mhd-matrix .whymed { font-size: 11px; padding: 10px 12px; }
@@ -122,115 +121,132 @@
 
   @media (max-width: 360px) {
     .mhd-matrix .val { font-size: 9.5px; }
-    .mhd-matrix .cell-y30 .val { font-size: 10px; }
+    .mhd-matrix .cell-y10 .val { font-size: 10px; }
     .mhd-matrix .scenario-label { font-size: 10.5px; }
   }
 </style>
 </head>
 <body>
 <div class="page">
+  <nav class="nav" aria-label="Site navigation">
+    <a href="./index.html">Back to index</a>
+    <a href="./marblehead-override-matrix.html">Open interactive explainer</a>
+  </nav>
+
+  <p class="page-note">
+    Get our free local reporting delivered straight to your inbox. No noise, no spam, just clear, independent coverage of Marblehead. Sign up for our once-a-week newsletter.
+  </p>
+
   <div class="mhd-matrix">
     <div class="mhd-inner">
-      <h2 class="mhd-h">How Marblehead's total property tax levy grows over 30 years</h2>
+
+      <h2 class="mhd-h">What the override vote means for the median Marblehead tax bill</h2>
+
       <p class="mhd-lede">
-        Marblehead collects roughly <strong>$84.9 million</strong> in property taxes today. Under Proposition 2½, that entire levy automatically grows 2.5% every year whether or not any override passes. Each override scenario layers new permanent capacity on top of that baseline, and that new capacity compounds at 2.5% too. Figures show the town's total annual property tax levy in $ millions, with the increase above today's baseline shown below each total.
+        Marblehead voters are not just deciding whether they can absorb a bigger tax bill next year. They are deciding whether to give the town a larger and permanent claim on their property taxes, one that becomes part of the levy limit and then keeps growing under Proposition 2 1/2. For the homeowner in the middle of town, the baseline is a <strong>median single-family home</strong> assessed at $998,550 with a current tax bill of $8,548.
       </p>
       <p class="mhd-sub">
-        Even under "No overrides," the levy roughly doubles by year 30 through compounding alone. Any override authorization becomes a permanent, compounding addition on top of that growth and Town Meeting is not legally bound to spend new capacity on the purposes it was approved for.
+        That median sits at the middle of Marblehead's 6,244 single-family homes, with 3,122 assessed higher and 3,122 lower. The town's published projections use the average single-family assessment of $1,291,507, a figure lifted by higher-value homes and about 29% above the median, which is why this page centers the more representative middle household instead.
       </p>
+
       <div class="legend-row">
-        <div class="legend-bar"><div class="legend-swatch" style="background:rgba(30,58,95,0.05);"></div><div class="legend-swatch" style="background:rgba(30,58,95,0.2);"></div><div class="legend-swatch" style="background:rgba(30,58,95,0.4);"></div><div class="legend-swatch" style="background:rgba(30,58,95,0.6);"></div><div class="legend-swatch" style="background:rgba(30,58,95,0.8);"></div><div class="legend-swatch" style="background:rgba(30,58,95,1);"></div></div>
-        <span>Less → More total levy</span>
+        <div class="legend-bar"><div class="legend-swatch" style="background:rgba(122,21,21,0.05);"></div><div class="legend-swatch" style="background:rgba(122,21,21,0.2);"></div><div class="legend-swatch" style="background:rgba(122,21,21,0.4);"></div><div class="legend-swatch" style="background:rgba(122,21,21,0.6);"></div><div class="legend-swatch" style="background:rgba(122,21,21,0.8);"></div><div class="legend-swatch" style="background:rgba(122,21,21,1);"></div></div>
+        <span>Less to more added to the median annual tax bill</span>
       </div>
+
       <div class="scroll">
         <table class="mhd-tbl">
           <thead>
             <tr>
               <th class="thead-scen">Scenario</th>
               <th class="thead-col"><div class="th-label">Today</div><div class="th-sub">Baseline</div></th>
-              <th class="thead-col"><div class="th-label">Year 1</div><div class="th-sub">Authorized</div></th>
+              <th class="thead-col"><div class="th-label">Year 1</div><div class="th-sub">Draw 1</div></th>
+              <th class="thead-col"><div class="th-label">Year 3</div><div class="th-sub">Phased</div></th>
+              <th class="thead-col"><div class="th-label">Year 5</div><div class="th-sub">Growing</div></th>
               <th class="thead-col"><div class="th-label">Year 10</div><div class="th-sub">Growing</div></th>
-              <th class="thead-col"><div class="th-label">Year 20</div><div class="th-sub">Compounding</div></th>
-              <th class="thead-col"><div class="th-label">Year 30</div><div class="th-sub">Compounding</div></th>
             </tr>
           </thead>
           <tbody>
-            <tr class="row" style="--oc:#1E3A5F;">
-              <td class="scenario-cell"><div class="scenario-inner"><div class="dot" style="background:#1E3A5F;"></div><div><div class="scenario-label">Tier 3 + Trash</div><div class="sublabel">$209M by yr 30</div></div></div></td>
-              <td class="c"><div class="cell cell-today"><div class="val">$84.9M</div></div></td>
-              <td class="c"><div class="cell" style="background:rgb(215,220,226);color:#111;"><div class="val">$102.2M</div><div class="delta" style="color:#111;">+$17.3M</div></div></td>
-              <td class="c"><div class="cell" style="background:rgb(154,166,183);color:#111;"><div class="val">$127.6M</div><div class="delta" style="color:#111;">+$42.7M</div></div></td>
-              <td class="c"><div class="cell" style="background:rgb(102,121,146);color:#fff;"><div class="val">$163.4M</div><div class="delta" style="color:#fff;">+$78.5M</div></div></td>
-              <td class="c"><div class="cell cell-y30" style="background:rgb(30,58,95);color:#fff;"><div class="val">$209.1M</div><div class="delta" style="color:#fff;">+$124.2M</div></div></td>
+            <tr class="row" style="--oc:#7A1515;">
+              <td class="scenario-cell"><div class="scenario-inner"><div class="dot" style="background:#7A1515;"></div><div><div class="scenario-label">Tier 3 + Trash</div><div class="sublabel">~$177/mo by yr 10</div></div></div></td>
+              <td class="c"><div class="cell cell-today"><div class="val">$8,548</div></div></td>
+              <td class="c"><div class="cell" style="background:rgb(213,182,182);color:#111;"><div class="val">$9,212</div><div class="delta" style="color:#111;">+$664</div></div></td>
+              <td class="c"><div class="cell" style="background:rgb(143,58,58);color:#fff;"><div class="val">$10,330</div><div class="delta" style="color:#fff;">+$1,782</div></div></td>
+              <td class="c"><div class="cell" style="background:rgb(137,48,48);color:#fff;"><div class="val">$10,421</div><div class="delta" style="color:#fff;">+$1,873</div></div></td>
+              <td class="c"><div class="cell cell-y10" style="background:rgb(122,21,21);color:#fff;"><div class="val">$10,666</div><div class="delta" style="color:#fff;">+$2,118</div></div></td>
             </tr>
-            <tr class="row" style="--oc:#3E6A8E;">
-              <td class="scenario-cell"><div class="scenario-inner"><div class="dot" style="background:#3E6A8E;"></div><div><div class="scenario-label">Tier 3 only</div><div class="sublabel">$204M by yr 30</div></div></div></td>
-              <td class="c"><div class="cell cell-today"><div class="val">$84.9M</div></div></td>
-              <td class="c"><div class="cell" style="background:rgb(220,228,235);color:#111;"><div class="val">$99.9M</div><div class="delta" style="color:#111;">+$15.0M</div></div></td>
-              <td class="c"><div class="cell" style="background:rgb(168,188,204);color:#111;"><div class="val">$124.8M</div><div class="delta" style="color:#111;">+$39.9M</div></div></td>
-              <td class="c"><div class="cell" style="background:rgb(124,154,178);color:#fff;"><div class="val">$159.7M</div><div class="delta" style="color:#fff;">+$74.8M</div></div></td>
-              <td class="c"><div class="cell cell-y30" style="background:rgb(62,106,142);color:#fff;"><div class="val">$204.4M</div><div class="delta" style="color:#fff;">+$119.5M</div></div></td>
+            <tr class="row" style="--oc:#B22222;">
+              <td class="scenario-cell"><div class="scenario-inner"><div class="dot" style="background:#B22222;"></div><div><div class="scenario-label">Tier 3 only</div><div class="sublabel">~$152/mo by yr 10</div></div></div></td>
+              <td class="c"><div class="cell cell-today"><div class="val">$8,548</div></div></td>
+              <td class="c"><div class="cell" style="background:rgb(239,210,210);color:#111;"><div class="val">$8,977</div><div class="delta" style="color:#111;">+$429</div></div></td>
+              <td class="c"><div class="cell" style="background:rgb(199,94,94);color:#fff;"><div class="val">$10,083</div><div class="delta" style="color:#fff;">+$1,535</div></div></td>
+              <td class="c"><div class="cell" style="background:rgb(196,86,86);color:#fff;"><div class="val">$10,161</div><div class="delta" style="color:#fff;">+$1,613</div></div></td>
+              <td class="c"><div class="cell cell-y10" style="background:rgb(188,64,64);color:#fff;"><div class="val">$10,373</div><div class="delta" style="color:#fff;">+$1,825</div></div></td>
             </tr>
-            <tr class="row" style="--oc:#2D5E62;">
-              <td class="scenario-cell"><div class="scenario-inner"><div class="dot" style="background:#2D5E62;"></div><div><div class="scenario-label">Tier 2 + Trash</div><div class="sublabel">$203M by yr 30</div></div></div></td>
-              <td class="c"><div class="cell cell-today"><div class="val">$84.9M</div></div></td>
-              <td class="c"><div class="cell" style="background:rgb(217,226,227);color:#111;"><div class="val">$99.2M</div><div class="delta" style="color:#111;">+$14.3M</div></div></td>
-              <td class="c"><div class="cell" style="background:rgb(161,183,184);color:#111;"><div class="val">$123.9M</div><div class="delta" style="color:#111;">+$39.0M</div></div></td>
-              <td class="c"><div class="cell" style="background:rgb(112,146,148);color:#fff;"><div class="val">$158.6M</div><div class="delta" style="color:#fff;">+$73.7M</div></div></td>
-              <td class="c"><div class="cell cell-y30" style="background:rgb(45,94,98);color:#fff;"><div class="val">$203.0M</div><div class="delta" style="color:#fff;">+$118.1M</div></div></td>
+            <tr class="row" style="--oc:#5C3A1E;">
+              <td class="scenario-cell"><div class="scenario-inner"><div class="dot" style="background:#5C3A1E;"></div><div><div class="scenario-label">Tier 2 + Trash</div><div class="sublabel">~$146/mo by yr 10</div></div></div></td>
+              <td class="c"><div class="cell cell-today"><div class="val">$8,548</div></div></td>
+              <td class="c"><div class="cell" style="background:rgb(216,207,201);color:#111;"><div class="val">$9,063</div><div class="delta" style="color:#111;">+$515</div></div></td>
+              <td class="c"><div class="cell" style="background:rgb(142,118,99);color:#fff;"><div class="val">$10,022</div><div class="delta" style="color:#fff;">+$1,474</div></div></td>
+              <td class="c"><div class="cell" style="background:rgb(136,111,91);color:#fff;"><div class="val">$10,097</div><div class="delta" style="color:#fff;">+$1,549</div></div></td>
+              <td class="c"><div class="cell cell-y10" style="background:rgb(120,92,69);color:#fff;"><div class="val">$10,300</div><div class="delta" style="color:#fff;">+$1,752</div></div></td>
             </tr>
-            <tr class="row" style="--oc:#467376;">
-              <td class="scenario-cell"><div class="scenario-inner"><div class="dot" style="background:#467376;"></div><div><div class="scenario-label">Tier 2 only</div><div class="sublabel">$198M by yr 30</div></div></div></td>
-              <td class="c"><div class="cell cell-today"><div class="val">$84.9M</div></div></td>
-              <td class="c"><div class="cell" style="background:rgb(222,230,230);color:#111;"><div class="val">$96.9M</div><div class="delta" style="color:#111;">+$12.0M</div></div></td>
-              <td class="c"><div class="cell" style="background:rgb(172,192,193);color:#111;"><div class="val">$121.0M</div><div class="delta" style="color:#111;">+$36.1M</div></div></td>
-              <td class="c"><div class="cell" style="background:rgb(129,160,162);color:#fff;"><div class="val">$154.9M</div><div class="delta" style="color:#fff;">+$70.0M</div></div></td>
-              <td class="c"><div class="cell cell-y30" style="background:rgb(70,115,118);color:#fff;"><div class="val">$198.3M</div><div class="delta" style="color:#fff;">+$113.4M</div></div></td>
+            <tr class="row" style="--oc:#8B5E3C;">
+              <td class="scenario-cell"><div class="scenario-inner"><div class="dot" style="background:#8B5E3C;"></div><div><div class="scenario-label">Tier 2 only</div><div class="sublabel">~$122/mo by yr 10</div></div></div></td>
+              <td class="c"><div class="cell cell-today"><div class="val">$8,548</div></div></td>
+              <td class="c"><div class="cell" style="background:rgb(240,234,229);color:#111;"><div class="val">$8,828</div><div class="delta" style="color:#111;">+$280</div></div></td>
+              <td class="c"><div class="cell" style="background:rgb(188,161,142);color:#fff;"><div class="val">$9,775</div><div class="delta" style="color:#fff;">+$1,227</div></div></td>
+              <td class="c"><div class="cell" style="background:rgb(184,157,136);color:#fff;"><div class="val">$9,837</div><div class="delta" style="color:#fff;">+$1,289</div></div></td>
+              <td class="c"><div class="cell cell-y10" style="background:rgb(175,144,120);color:#fff;"><div class="val">$10,007</div><div class="delta" style="color:#fff;">+$1,459</div></div></td>
             </tr>
-            <tr class="row" style="--oc:#4A5D2E;">
-              <td class="scenario-cell"><div class="scenario-inner"><div class="dot" style="background:#4A5D2E;"></div><div><div class="scenario-label">Tier 1 + Trash</div><div class="sublabel">$197M by yr 30</div></div></div></td>
-              <td class="c"><div class="cell cell-today"><div class="val">$84.9M</div></div></td>
-              <td class="c"><div class="cell" style="background:rgb(222,226,217);color:#111;"><div class="val">$96.2M</div><div class="delta" style="color:#111;">+$11.3M</div></div></td>
-              <td class="c"><div class="cell" style="background:rgb(174,182,161);color:#111;"><div class="val">$120.1M</div><div class="delta" style="color:#111;">+$35.2M</div></div></td>
-              <td class="c"><div class="cell" style="background:rgb(132,145,113);color:#fff;"><div class="val">$153.8M</div><div class="delta" style="color:#fff;">+$68.9M</div></div></td>
-              <td class="c"><div class="cell cell-y30" style="background:rgb(74,93,46);color:#fff;"><div class="val">$196.9M</div><div class="delta" style="color:#fff;">+$112.0M</div></div></td>
+            <tr class="row" style="--oc:#1B4F6A;">
+              <td class="scenario-cell"><div class="scenario-inner"><div class="dot" style="background:#1B4F6A;"></div><div><div class="scenario-label">Tier 1 + Trash</div><div class="sublabel">~$115/mo by yr 10</div></div></div></td>
+              <td class="c"><div class="cell cell-today"><div class="val">$8,548</div></div></td>
+              <td class="c"><div class="cell" style="background:rgb(216,225,230);color:#111;"><div class="val">$8,913</div><div class="delta" style="color:#111;">+$365</div></div></td>
+              <td class="c"><div class="cell" style="background:rgb(130,158,173);color:#111;"><div class="val">$9,713</div><div class="delta" style="color:#111;">+$1,165</div></div></td>
+              <td class="c"><div class="cell" style="background:rgb(124,154,169);color:#fff;"><div class="val">$9,772</div><div class="delta" style="color:#fff;">+$1,224</div></div></td>
+              <td class="c"><div class="cell cell-y10" style="background:rgb(106,140,158);color:#fff;"><div class="val">$9,933</div><div class="delta" style="color:#fff;">+$1,385</div></div></td>
             </tr>
-            <tr class="row" style="--oc:#627030;">
-              <td class="scenario-cell"><div class="scenario-inner"><div class="dot" style="background:#627030;"></div><div><div class="scenario-label">Tier 1 only</div><div class="sublabel">$192M by yr 30</div></div></div></td>
-              <td class="c"><div class="cell cell-today"><div class="val">$84.9M</div></div></td>
-              <td class="c"><div class="cell" style="background:rgb(227,229,218);color:#111;"><div class="val">$93.9M</div><div class="delta" style="color:#111;">+$9.0M</div></div></td>
-              <td class="c"><div class="cell" style="background:rgb(184,191,162);color:#111;"><div class="val">$117.3M</div><div class="delta" style="color:#111;">+$32.4M</div></div></td>
-              <td class="c"><div class="cell" style="background:rgb(148,158,114);color:#fff;"><div class="val">$150.1M</div><div class="delta" style="color:#fff;">+$65.2M</div></div></td>
-              <td class="c"><div class="cell cell-y30" style="background:rgb(98,112,48);color:#fff;"><div class="val">$192.2M</div><div class="delta" style="color:#fff;">+$107.3M</div></div></td>
+            <tr class="row" style="--oc:#3A7D8C;">
+              <td class="scenario-cell"><div class="scenario-inner"><div class="dot" style="background:#3A7D8C;"></div><div><div class="scenario-label">Tier 1 only</div><div class="sublabel">~$91/mo by yr 10</div></div></div></td>
+              <td class="c"><div class="cell cell-today"><div class="val">$8,548</div></div></td>
+              <td class="c"><div class="cell" style="background:rgb(243,247,248);color:#111;"><div class="val">$8,678</div><div class="delta" style="color:#111;">+$130</div></div></td>
+              <td class="c"><div class="cell" style="background:rgb(169,198,205);color:#111;"><div class="val">$9,466</div><div class="delta" style="color:#111;">+$918</div></div></td>
+              <td class="c"><div class="cell" style="background:rgb(165,196,202);color:#111;"><div class="val">$9,512</div><div class="delta" style="color:#111;">+$964</div></div></td>
+              <td class="c"><div class="cell cell-y10" style="background:rgb(153,188,196);color:#111;"><div class="val">$9,639</div><div class="delta" style="color:#111;">+$1,091</div></div></td>
             </tr>
-            <tr class="row" style="--oc:#916428;">
-              <td class="scenario-cell"><div class="scenario-inner"><div class="dot" style="background:#916428;"></div><div><div class="scenario-label">Trash only</div><div class="sublabel">$178M by yr 30</div></div></div></td>
-              <td class="c"><div class="cell cell-today"><div class="val">$84.9M</div></div></td>
-              <td class="c"><div class="cell" style="background:rgb(235,227,216);color:#111;"><div class="val">$87.2M</div><div class="delta" style="color:#111;">+$2.3M</div></div></td>
-              <td class="c"><div class="cell" style="background:rgb(205,185,158);color:#111;"><div class="val">$108.9M</div><div class="delta" style="color:#111;">+$24.0M</div></div></td>
-              <td class="c"><div class="cell" style="background:rgb(180,149,109);color:#fff;"><div class="val">$139.4M</div><div class="delta" style="color:#fff;">+$54.5M</div></div></td>
-              <td class="c"><div class="cell cell-y30" style="background:rgb(145,100,40);color:#fff;"><div class="val">$178.4M</div><div class="delta" style="color:#fff;">+$93.5M</div></div></td>
+            <tr class="row" style="--oc:#3D6B35;">
+              <td class="scenario-cell"><div class="scenario-inner"><div class="dot" style="background:#3D6B35;"></div><div><div class="scenario-label">Trash only</div><div class="sublabel">~$24/mo by yr 10</div></div></div></td>
+              <td class="c"><div class="cell cell-today"><div class="val">$8,548</div></div></td>
+              <td class="c"><div class="cell" style="background:rgb(234,239,233);color:#111;"><div class="val">$8,783</div><div class="delta" style="color:#111;">+$235</div></div></td>
+              <td class="c"><div class="cell" style="background:rgb(233,238,232);color:#111;"><div class="val">$8,795</div><div class="delta" style="color:#111;">+$247</div></div></td>
+              <td class="c"><div class="cell" style="background:rgb(232,237,231);color:#111;"><div class="val">$8,807</div><div class="delta" style="color:#111;">+$259</div></div></td>
+              <td class="c"><div class="cell cell-y10" style="background:rgb(229,235,228);color:#111;"><div class="val">$8,841</div><div class="delta" style="color:#111;">+$293</div></div></td>
             </tr>
             <tr class="row" style="--oc:#999;">
-              <td class="scenario-cell"><div class="scenario-inner"><div class="dot" style="background:#999;"></div><div><div class="scenario-label">No overrides</div><div class="sublabel">$174M by yr 30</div></div></div></td>
-              <td class="c"><div class="cell cell-today"><div class="val">$84.9M</div></div></td>
-              <td class="c"><div class="cell" style="background:rgb(235,235,235);color:#666;"><div class="val">$84.9M</div><div class="delta" style="color:#888;">baseline</div></div></td>
-              <td class="c"><div class="cell" style="background:rgb(220,220,220);color:#555;"><div class="val">$106.0M</div><div class="delta" style="color:#666;">+$21.1M</div></div></td>
-              <td class="c"><div class="cell" style="background:rgb(195,195,195);color:#444;"><div class="val">$135.7M</div><div class="delta" style="color:#555;">+$50.8M</div></div></td>
-              <td class="c"><div class="cell cell-y30" style="background:rgb(160,160,160);color:#fff;"><div class="val">$173.7M</div><div class="delta" style="color:#fff;">+$88.8M</div></div></td>
+              <td class="scenario-cell"><div class="scenario-inner"><div class="dot" style="background:#999;"></div><div><div class="scenario-label">No overrides</div><div class="sublabel">no change</div></div></div></td>
+              <td class="c"><div class="cell cell-today"><div class="val">$8,548</div></div></td>
+              <td class="c"><div class="cell" style="background:#F5F5F5;color:#BBB;"><div class="val">$8,548</div><div class="delta" style="color:#BBB;">—</div></div></td>
+              <td class="c"><div class="cell" style="background:#F5F5F5;color:#BBB;"><div class="val">$8,548</div><div class="delta" style="color:#BBB;">—</div></div></td>
+              <td class="c"><div class="cell" style="background:#F5F5F5;color:#BBB;"><div class="val">$8,548</div><div class="delta" style="color:#BBB;">—</div></div></td>
+              <td class="c"><div class="cell cell-y10" style="background:#F5F5F5;color:#BBB;"><div class="val">$8,548</div><div class="delta" style="color:#BBB;">—</div></div></td>
             </tr>
           </tbody>
         </table>
       </div>
+
       <div class="callout">
-        <strong>The compounding story:</strong> Even if both override questions fail, Marblehead's total property tax levy still grows from $84.9 million today to $173.7 million by year 30, a permanent increase of $88.8 million, or more than double today's collections, created entirely by Proposition 2½'s automatic 2.5% annual escalator. Under Tier 3 + Trash, the levy reaches $209.1 million, with $35.4 million of that coming from the override base compounding on top of whatever voters authorize.
+        <strong>What stands out for the median homeowner:</strong> Even without an override, Marblehead's median single-family tax bill has climbed about 22% over the past six years, roughly $1,540 on today's median home. Under the biggest combined option, Tier 3 plus trash, the median bill rises by $1,782 by Year 3, meaning the largest override package adds more in three years than the tax bill has risen over the previous six.
       </div>
+
       <div class="whymed">
-        <strong>Why the baseline matters:</strong> Override debates typically focus on the new amount on the ballot ($9M, $12M or $15M plus $2.3M trash). But Marblehead's levy grows every year regardless and that growth, like any override, is permanent and compounding. Town Meeting decides appropriations each year; new levy capacity, once authorized, is not legally tied to the purposes it was approved for.
+        <strong>Why the median is the honest baseline:</strong> In a wealthy community, averages can blur more than they clarify. Marblehead's highest-value homes pull the average assessment upward, leaving it $292,957 higher than the median. For a kitchen-table understanding of what these scenarios mean for a typical homeowner, the middle single-family home is the fairer reference point.
       </div>
+
       <div class="footnote">
-        Baseline of $84.9M reflects Marblehead's approved FY2026 total property tax levy. Override base amounts from the April 8, 2026 town override presentation. Year 1 reflects the baseline plus initial override authorization; years 10, 20 and 30 apply the 2.5% annual Proposition 2½ growth factor compounded on both the baseline and override base. Delta below each total shows the increase above today's baseline, including baseline compounding and any override contribution.
+        Today's bill of $8,548 reflects the fiscal 2026 residential rate of $8.56 per $1,000 of assessed value applied to the median single-family assessment of $998,550. Scenario amounts use the town's April 8, 2026 override presentation: Tier 1 at $9 million, Tier 2 at $12 million, Tier 3 at $15 million, plus a separate trash override of $2,298,575 that would eliminate the roughly $262 annual household fee if it passes. Year 1 shows the first-year impact, Year 3 shows the fully phased-in totals, and Years 5 and 10 show the continuing effect once that added levy authority keeps compounding under Proposition 2 1/2. Actual bills still vary by individual assessment.
       </div>
+
     </div>
   </div>
 </div>

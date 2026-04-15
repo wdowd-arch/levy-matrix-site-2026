@@ -1,30 +1,34 @@
-# Marblehead Levy Capacity Matrix 2026
+# Marblehead Median Home Tax Bill Impact
 
-GitHub Pages-ready publication package for a standalone levy-capacity explainer showing how Marblehead's total property tax levy grows over 30 years under each override scenario.
+GitHub Pages-ready publication package for a standalone tax-impact matrix showing what each Marblehead override scenario would mean for the median single-family homeowner.
 
 ## Repository name
 
-`levy-capacity-matrix-2026`
+`levy-matrix-2026`
 
 ## Description
 
-Standalone GitHub Pages site showing Marblehead's total property tax levy growth over 30 years for every override scenario.
+Standalone GitHub Pages site showing annual property tax impacts on the median Marblehead single-family home under every override scenario.
 
 ## Why this exists
 
-The median single-family home in Marblehead is assessed at $998,550 and pays $8,548 in property taxes this fiscal year, at a residential rate of $8.56 per $1,000 of value. That homeowner-level baseline is the starting point for understanding the override debate, but it is not the whole story.
+Marblehead voters are not just being asked whether they can absorb a bigger tax bill next year. They are being asked whether to give the town a larger and permanent claim on their property taxes, one that would become part of Marblehead's levy limit and keep growing on its own.
 
-The larger structural question is what happens to Marblehead's levy limit after an override passes. Proposition 2½ caps how much a Massachusetts town can raise in property taxes in any given year. An override does not just add money for a temporary draw period. It permanently lifts the levy limit. Once lifted, the new limit grows automatically by 2.5 percent every year, forever, whether the town spends up to it or not.
+For the homeowner in the middle of town, the starting point is clear. The median single-family home in Marblehead is assessed at $998,550 and pays $8,548 in property taxes this fiscal year, based on a residential rate of $8.56 per $1,000 of value. That is the middle of Marblehead's 6,244 single-family homes, meaning 3,122 are assessed higher and 3,122 are assessed lower.
 
-Marblehead's fiscal 2026 levy is $84.618 million. This project exists to show what each override scenario adds to that permanent levy limit on day one and what that authority grows to over time under Proposition 2½'s automatic compounding.
+Town officials built their published tax-impact projections around the average single-family assessment of $1,291,507. In a wealthy community, averages can blur more than they clarify. Marblehead's highest-value homes pull that number upward, leaving it about 29% above the median, or $292,957 higher. For a typical homeowner, the median tells the more honest story.
 
-Marblehead's Annual Town Meeting convenes May 4 at the Marblehead High School Field House. Before any override reaches the June 9 ballot, Town Meeting must vote to send it there. Town administrator Thatcher Kezer and finance director Aleesha Benjamin presented the package on April 8, 2026. It contains two separate ballot questions: a tiered service override and a standalone trash override.
+Marblehead's Annual Town Meeting convenes May 4 at the Marblehead High School Field House. Before any override can appear on the June 9 ballot, Town Meeting must first decide whether voters should see it at all. And what voters would be deciding is not a temporary tax package. It is a permanent increase in the town's taxing authority under Proposition 2 1/2.
 
-The service override has three tiers: Tier 1, "Restore," at $9 million; Tier 2, "Stabilize," at $12 million; and Tier 3, "Invest," at $15 million. Each tier includes the one below it, and whichever highest tier clears 50 percent wins. If none does, the service override fails. The trash override is a separate yes-or-no question worth $2,298,575.
+Town Administrator Thatcher Kezer and Finance Director Aleesha Benjamin presented the proposal April 8, 2026. The package contains two separate ballot questions: a tiered service override and a standalone trash override. They are linked politically but not legally. Each rises or falls on its own.
 
-This page is designed to function as the second embedded widget in a broader article, appearing after readers have seen the near-term household tax effects. At that point, the story shifts from next year's bill to the longer-term structural effect of permanently expanding the town's taxing authority.
+The service override comes in three layers, and voters weigh each one separately. Tier 1, "Restore," is $9 million. Tier 2, "Stabilize," is $12 million. Tier 3, "Invest," is $15 million. Each tier sits on top of the one below it, so a vote for Tier 3 also includes everything in Tiers 1 and 2.
 
-Two features of Massachusetts law make that structural view important. First, Town Meeting is not required to levy up to the full authorized limit each year. It can bank unused capacity and draw on it later. Second, Town Meeting is not bound to appropriate override dollars to the same purposes in future years. Today’s library restoration can become tomorrow’s pension contribution with no additional vote. In the case of school spending, Town Meeting appropriates the money and the School Committee then determines how school funds are allocated. The only way to reduce authorized levy capacity is an underride, which itself requires a majority vote of the electorate.
+The trash override is a separate yes-or-no question worth $2,298,575. It would shift curbside trash and recycling into the property tax levy and eliminate the current household fee of about $262 a year. If it fails, the fee stays. Unlike the service override, which phases in over three years, the trash question takes nearly its full bite in year one.
+
+Because the two questions are independent, voters face eight possible outcomes. This page exists to show what each of those outcomes does to the median homeowner's bill, starting from $8,548, with Year 3 figures representing the fully phased-in number.
+
+Even without an override, Marblehead's median single-family tax bill has climbed about 22% over the past six years. On today's median home, that amounts to roughly $1,540 in additional taxes. Under the biggest combined option, Tier 3 plus trash, the median bill would rise by $1,782 by Year 3.
 
 ## What this repo contains
 
@@ -33,25 +37,25 @@ Two features of Massachusetts law make that structural view important. First, To
 
 ## Purpose
 
-This project publishes a single reference page designed to show the long-term compounding effect of Proposition 2½ and how each override outcome adds permanent levy capacity on top of the existing baseline.
+This project publishes a single reference page designed to make the tax consequences of each override outcome easy to compare at a glance. It is written for readers who want a concise, static explainer rather than an interactive app.
 
-The page is aimed at readers who want to understand not just the size of the ballot questions, but how the town's overall levy grows over time even in the no-override case.
+The page centers the median single-family home assessment rather than the average assessment, so the displayed tax impacts better reflect what a typical homeowner would pay.
 
-It is built to complement a separate household tax-impact widget. Used together, the two pages help readers distinguish between short-term bill changes and long-term changes in permanent taxing authority.
+It is intended to support reporting that distinguishes between the immediate hit to a household tax bill and the longer-lasting increase in taxing authority created by an override.
 
 ## Audience
 
 - Marblehead voters
-- Local reporters and editors
-- Researchers tracking municipal finance
-- Civic groups explaining long-term budget impacts
+- Local journalists and researchers
+- Advocacy groups or neighborhood organizers
+- Readers comparing override scenarios quickly on desktop or mobile
 
 ## Features
 
 - Fully static HTML with no build step
-- Mobile-friendly responsive table
-- Color-coded scenario comparison
-- 30-year levy growth framing
+- Mobile-friendly responsive layout
+- Color-coded comparison table
+- Published as a single self-contained page
 - GitHub Pages compatible from the repository root
 
 ## Publishing on GitHub Pages
@@ -66,7 +70,7 @@ It is built to complement a separate household tax-impact widget. Used together,
 
 Your published site will then be available at:
 
-`https://<your-github-username>.github.io/levy-capacity-matrix-2026/`
+`https://<your-github-username>.github.io/levy-matrix-2026/`
 
 ## Local preview
 
@@ -78,19 +82,18 @@ For most updates, edit `index.html`.
 
 ## Content notes
 
-- Figures are shown in millions of dollars.
-- The page compares baseline levy growth with each override scenario over a 30-year horizon.
-- Explanatory callouts highlight compounding and the distinction between authorized levy capacity and yearly appropriations.
-- The page is designed to accompany reporting that explains how Town Meeting and later voters are deciding whether to permanently expand levy authority, not merely approve a temporary draw schedule.
+- Tax figures are shown for the median Marblehead single-family home assessment listed in the page.
+- Figures compare the current tax bill with projected costs under each override outcome.
+- The page includes explanatory framing on median versus average home valuation.
+- The page is designed to support reporting on permanent levy-limit changes, not just the first year's tax hit.
 
 ## Suggested topics/tags
 
 - `github-pages`
 - `static-site`
 - `civics`
-- `municipal-finance`
+- `local-government`
 - `property-tax`
-- `proposition-2-5`
 - `massachusetts`
 - `marblehead`
 
