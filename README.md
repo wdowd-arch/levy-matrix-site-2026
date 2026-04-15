@@ -8,11 +8,11 @@ GitHub Pages-ready publication package for a standalone tax-impact matrix showin
 
 ## Description
 
-Standalone GitHub Pages site showing annual property tax impacts on the median Marblehead single-family home under every override scenario, including the baseline path if taxes keep growing under the 2.5% levy-limit cap without any override.
+Standalone GitHub Pages site showing annual property tax impacts on the median Marblehead single-family home under every override scenario, including a baseline path with no override and later-year paths where added override authority has already raised the levy base before 2.5% annual growth continues from that higher level.
 
 ## Why this exists
 
-Marblehead voters are not just being asked whether they can absorb a bigger tax bill next year. They are being asked whether to give the town a larger and permanent claim on their property taxes, one that would become part of Marblehead's levy limit and keep growing on its own.
+Marblehead voters are not just being asked whether they can absorb a bigger tax bill next year. They are being asked whether to give the town a larger and permanent claim on their property taxes, one that would become part of Marblehead's levy limit and raise the base from which later growth can occur.
 
 For the homeowner in the middle of town, the starting point is clear. The median single-family home in Marblehead is assessed at $998,550 and pays $8,548 in property taxes this fiscal year, based on a residential rate of $8.56 per $1,000 of value. That is the middle of Marblehead's 6,244 single-family homes, meaning 3,122 are assessed higher and 3,122 are assessed lower.
 
@@ -26,7 +26,7 @@ The service override comes in three layers, and voters weigh each one separately
 
 The trash override is a separate yes-or-no question worth $2,298,575. It would shift curbside trash and recycling into the property tax levy and eliminate the current household fee of about $262 a year. If it fails, the fee stays. Unlike the service override, which phases in over three years, the trash question takes nearly its full bite in year one.
 
-Because the two questions are independent, voters face eight possible outcomes. This page exists to show what each of those outcomes does to the median homeowner's bill, starting from $8,548, with Year 3 figures representing the fully phased-in number. The "No overrides" row also shows how that baseline bill can still rise over time if it compounds at 2.5% annually.
+Because the two questions are independent, voters face eight possible outcomes. This page exists to show what each of those outcomes does to the median homeowner's bill, starting from $8,548, with Year 3 figures representing the fully phased-in number. From there, Years 5 and 10 treat that higher total as the base and apply 2.5% annual growth in the following years. The "No overrides" row shows the same later-year compounding logic applied to the current baseline without added override authority.
 
 Even without an override, Marblehead's median single-family tax bill has climbed about 22% over the past six years. On today's median home, that amounts to roughly $1,540 in additional taxes. Under the biggest combined option, Tier 3 plus trash, the median bill would rise by $1,782 by Year 3.
 
@@ -85,7 +85,8 @@ For most updates, edit `index.html`.
 - Tax figures are shown for the median Marblehead single-family home assessment listed in the page.
 - Figures compare the current tax bill with projected costs under each override outcome.
 - The page includes explanatory framing on median versus average home valuation.
-- The no-override row compounds the current median bill at 2.5% annually across the displayed years.
+- The no-override row applies 2.5% annual growth to the current median bill across the later displayed years.
+- Override rows treat the fully phased-in Year 3 total as the higher base from which Years 5 and 10 are grown.
 - The page is designed to support reporting on permanent levy-limit changes, not just the first year's tax hit.
 
 ## Suggested topics/tags
