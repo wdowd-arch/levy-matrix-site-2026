@@ -8,7 +8,7 @@ GitHub Pages-ready publication package for a standalone tax-impact matrix showin
 
 ## Description
 
-Standalone GitHub Pages site showing annual property tax impacts on the median Marblehead single-family home under every override scenario.
+Standalone GitHub Pages site showing annual property tax impacts on the median Marblehead single-family home under every override scenario, including the baseline path if taxes keep growing under the 2.5% levy-limit cap without any override.
 
 ## Why this exists
 
@@ -26,7 +26,7 @@ The service override comes in three layers, and voters weigh each one separately
 
 The trash override is a separate yes-or-no question worth $2,298,575. It would shift curbside trash and recycling into the property tax levy and eliminate the current household fee of about $262 a year. If it fails, the fee stays. Unlike the service override, which phases in over three years, the trash question takes nearly its full bite in year one.
 
-Because the two questions are independent, voters face eight possible outcomes. This page exists to show what each of those outcomes does to the median homeowner's bill, starting from $8,548, with Year 3 figures representing the fully phased-in number.
+Because the two questions are independent, voters face eight possible outcomes. This page exists to show what each of those outcomes does to the median homeowner's bill, starting from $8,548, with Year 3 figures representing the fully phased-in number. The "No overrides" row also shows how that baseline bill can still rise over time if it compounds at 2.5% annually.
 
 Even without an override, Marblehead's median single-family tax bill has climbed about 22% over the past six years. On today's median home, that amounts to roughly $1,540 in additional taxes. Under the biggest combined option, Tier 3 plus trash, the median bill would rise by $1,782 by Year 3.
 
@@ -85,6 +85,7 @@ For most updates, edit `index.html`.
 - Tax figures are shown for the median Marblehead single-family home assessment listed in the page.
 - Figures compare the current tax bill with projected costs under each override outcome.
 - The page includes explanatory framing on median versus average home valuation.
+- The no-override row compounds the current median bill at 2.5% annually across the displayed years.
 - The page is designed to support reporting on permanent levy-limit changes, not just the first year's tax hit.
 
 ## Suggested topics/tags
